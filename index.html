@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MIA Soluciones | Automatización y Tecnología</title>
+    <meta
+      name="description"
+      content="MIA Soluciones: Automatización, análisis de datos y soluciones tecnológicas para empresas."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        background: #f9fafb;
+        color: #1f2937;
+      }
+      header {
+        background: linear-gradient(135deg, #0f766e, #115e59);
+        color: white;
+        padding: 80px 20px;
+        text-align: center;
+      }
+      header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+      header p {
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto 30px;
+      }
+      .btn {
+        background: #ffffff;
+        color: #0f766e;
+        padding: 14px 28px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      section {
+        padding: 60px 20px;
+        max-width: 1100px;
+        margin: auto;
+      }
+      .services {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+      }
+      .card {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+      }
+      .card h3 {
+        margin-top: 0;
+        color: #0f766e;
+      }
+      .cta {
+        background: #0f766e;
+        color: white;
+        text-align: center;
+        padding: 60px 20px;
+      }
+      footer {
+        text-align: center;
+        padding: 20px;
+        font-size: 0.9rem;
+        color: #6b7280;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>MIA Soluciones</h1>
+      <p>
+        Automatizamos procesos, analizamos datos y construimos soluciones
+        tecnológicas para que tu negocio crezca.
+      </p>
+      <a href="#contacto" class="btn">Solicitar asesoría</a>
+    </header>
+
+    <section>
+      <h2>¿Qué hacemos?</h2>
+      <div class="services">
+        <div class="card">
+          <h3>🤖 Automatización</h3>
+          <p>
+            Optimización de procesos administrativos, reportes automáticos y
+            flujos inteligentes.
+          </p>
+        </div>
+        <div class="card">
+          <h3>📊 Análisis de Datos</h3>
+          <p>
+            Dashboards, KPIs y reportes claros para tomar mejores decisiones.
+          </p>
+        </div>
+        <div class="card">
+          <h3>💻 Soluciones Tecnológicas</h3>
+          <p>
+            Desarrollo de herramientas a medida, integraciones y soporte
+            tecnológico.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contáctanos</h2>
+      <p>Cuéntanos tu necesidad y te ayudamos a encontrar la mejor solución.</p>
+
+      <!-- Formulario compatible con Netlify -->
+      <form name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact" />
+        <p>
+          <input
+            type="text"
+            name="nombre"
+            placeholder="Nombre"
+            required
+            style="width: 100%; padding: 12px"
+          />
+        </p>
+        <p>
+          <input
+            type="email"
+            name="email"
+            placeholder="Correo electrónico"
+            required
+            style="width: 100%; padding: 12px"
+          />
+        </p>
+        <p>
+          <textarea
+            name="mensaje"
+            placeholder="Mensaje"
+            required
+            style="width: 100%; padding: 12px"
+          ></textarea>
+        </p>
+        <p>
+          <button type="submit" class="btn">Enviar mensaje</button>
+        </p>
+      </form>
+    </section>
+
+    <footer>© 2025 MIA Soluciones · miatech.cloud</footer>
+  </body>
+</html>
