@@ -187,7 +187,7 @@ h2 {
 }
 
 .page-width-1 {
-    max-width: 810px;
+    max-width: 1200px;
 }
 
 .page-width-2 {
@@ -210,7 +210,7 @@ h2 {
 .intro-left {
     margin-right: 20px;
     padding: 30px 40px;
-    max-width: 505px;    
+    max-width: 1200px;    
 }
 
 .intro-img-1 {
