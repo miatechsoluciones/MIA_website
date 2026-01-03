@@ -423,7 +423,7 @@
                   </button>
                 </form>
                 <br />
-                <p id="form-status"></p>
+                <p id="form-status" style="text-align: center; font-weight: 600; font-size: 1rem;"></p>
               </div>
             </div>
           </div>
@@ -449,10 +449,12 @@
 
           const form = e.target;
           const data = {
-            name: form.name.value,
+            nombre: form.nombre.value,
             email: form.email.value,
-            message: form.message.value,
+            mensaje: form.mensaje.value,
           };
+
+          console.log(data);
 
           const res = await fetch("/.netlify/functions/contact", {
             method: "POST",
