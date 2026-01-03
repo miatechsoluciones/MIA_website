@@ -12,7 +12,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/slick.css" type="text/css" />
     <link rel="stylesheet" href="css/templatemo-style.css" />
     <link rel="icon" href="img/logo.png" type="image/png" />
     <style>
@@ -107,8 +106,9 @@
         color: #ffffff;
       }
 
-      input {
-        color: black;
+      input,
+      textarea {
+        color: black !important;
       }
 
       @media (max-width: 768px) {
@@ -123,6 +123,12 @@
       a {
         color: #12b886;
         font-weight: bold;
+      }
+      input:hover,
+      textarea:hover {
+        color: inherit !important;
+        opacity: 1 !important;
+        cursor: pointer;
       }
     </style>
   </head>
@@ -184,7 +190,7 @@
                       <a class="nav-link" href="#contacto" data-no="4"
                         >Contacto</a
                       >
-                      <div class="circle"></div>
+                      <div class="circle2"></div>
                     </li>
                   </ul>
                 </div>
@@ -361,7 +367,12 @@
 
             <div class="col-lg-6">
               <div class="card-mia">
-                <form name="contact" method="POST" netlify>
+                <form
+                  name="contact"
+                  method="POST"
+                  data-netlify="true"
+                  action="gracias.html"
+                >
                   <input type="hidden" name="form-name" value="contact" />
 
                   <div class="mb-3">
@@ -429,14 +440,9 @@
       </div>
     </div>
     <!-- Preloader, https://ihatetomatoes.net/create-custom-preloading-screen/ -->
-    <div id="loader-wrapper">
-      <div id="loader"></div>
-      <div class="loader-section section-left"></div>
-      <div class="loader-section section-right"></div>
-    </div>
+
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/slick.js"></script>
     <script src="js/templatemo-script.js"></script>
   </body>
 </html>

@@ -1,95 +1,44 @@
 /*
-
-TemplateMo 560 Astro Motion
-
-https://templatemo.com/tm-560-astro-motion
-
+TemplateMo 560 Astro Motion - Cleaned
 */
 
-var gallery = undefined;
+$(document).ready(function () {
+  // Menu handling
+  $(".navbar-nav .nav-link").on("click", function () {
+    // Hide mobile menu
+    $(".navbar-collapse").collapse("hide");
 
-function closeMenu() {
-  $(".navbar-collapse").removeClass("show"); 
-}
-
-function highlightMenu(no) {
-  $(".navbar .navbar-nav > .nav-item").removeClass('selected');
-  $(".navbar .navbar-nav > .nav-item > .nav-link[data-no='" + no + "']").parent().addClass('selected');
-}
-
-function setupGallery() {
-  gallery = $('.gallery-slider').slick({
-    slidesToShow: 5,
-    slidesToScroll: 3,
-    dots: true,
-    arrows: false,
-    responsive: [
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3
-        }
-      },
-      {
-        breakpoint: 575,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
-      }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
-    ]
+    // Update selected state
+    $(".navbar-nav .nav-item").removeClass("selected");
+    $(this).parent().addClass("selected");
   });
-}
 
-function openPage(no) {
-  if(no == 2) {
-    if(gallery == undefined) {
-      setupGallery();
-    } else {
-      $('.gallery-slider').slick('unslick');
-      setupGallery();
-    }    
-  }
+  // Close menu when clicking outside
+  $(document).click(function (event) {
+    var clickover = $(event.target);
+    var _opened = $(".navbar-collapse").hasClass("show");
+    if (_opened === true && !clickover.closest(".navbar").length) {
+      $(".navbar-toggler").click();
+    }
+  });
 
-  $('.cd-hero-slider li').hide();
-  $('.cd-hero-slider li[data-page-no="' + no + '"]')
-    .fadeIn();
-}
+  // Smooth scroll for anchor links (optional but nice)
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute("href").substring(1);
+      const targetElement = document.getElementById(targetId);
 
-$(window).on('load', function() {
-  $('body').addClass('loaded');
-  openPage(1);
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 100, // Offset for navbar
+          behavior: "smooth",
+        });
+      }
+    });
+  });
 });
 
-jQuery(function() {
-    $('.tm-page-link').on('click', function(){
-      var pageNo = $(this).data('page-no');
-      openPage(pageNo);
-      highlightMenu(pageNo);
-    });
-
-    $(".navbar .navbar-nav > .nav-item > a.nav-link").on('click', function(e){
-      var pageNo = $(this).data('no');
-
-      openPage(pageNo);
-      highlightMenu(pageNo);
-      closeMenu();     
-    });
-
-    $("html").click(function(e) {
-      closeMenu();
-    });
+$(window).on("load", function () {
+  // Any load time logic if needed
 });
