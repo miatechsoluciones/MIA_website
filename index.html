@@ -371,7 +371,6 @@
                   name="contact"
                   method="POST"
                   data-netlify="true"
-                  action="gracias.html"
                 >
                   <input type="hidden" name="form-name" value="contact" />
 
@@ -427,6 +426,8 @@
                     Enviar mensaje
                   </button>
                 </form>
+                <br />
+                <p id="form-status"></p>
               </div>
             </div>
           </div>
@@ -444,5 +445,30 @@
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/templatemo-script.js"></script>
+    <script>
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          const form = e.target;
+          const data = {
+            name: form.name.value,
+            email: form.email.value,
+            message: form.message.value,
+          };
+
+          const res = await fetch("/.netlify/functions/contact", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+          });
+
+          const result = await res.json();
+
+          document.getElementById("form-status").innerText = result.message;
+          form.reset();
+        });
+    </script>
   </body>
 </html>
