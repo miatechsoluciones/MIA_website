@@ -195,7 +195,7 @@ h2 {
 }
 
 .page-left {
-    margin-left: 100px;
+    margin-left: 20px;
 }
 
 .page-right {
@@ -208,8 +208,8 @@ h2 {
 }
 
 .intro-left {
-    margin-right: 20px;
-    padding: 30px 40px;
+    margin-right: 10px;
+    padding: 10px 10px;
     max-width: 1200px;    
 }
 

@@ -15,12 +15,112 @@
     <link rel="stylesheet" href="css/slick.css" type="text/css" />
     <link rel="stylesheet" href="css/templatemo-style.css" />
     <style>
+      .btn-back-floating {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        width: 50px;
+        height: 50px;
+        background: #12b886;
+        color: #ffffff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        z-index: 999;
+        transition: all 0.3s ease;
+      }
+
+      .btn-back-floating:hover {
+        background: #115e59;
+        transform: translateY(-4px);
+      }
+
+      .section {
+        padding: 90px 0;
+      }
+
+      .section-light {
+        background: rgba(255, 255, 255, 0);
+        backdrop-filter: blur(10px);
+      }
+
+      .section-dark {
+        background: linear-gradient(135deg, #12b886, #1f3d2b);
+        color: #ffffff;
+        border-radius: 10px;
+      }
+
+      .section-title {
+        font-weight: 700;
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+      }
+
+      .section-subtitle {
+        max-width: 700px;
+        margin: 0 auto 50px;
+        font-size: 1.1rem;
+        color: #6b7280;
+      }
+
+      .card-mia {
+        background: #ffffff;
+        border-radius: 18px;
+        padding: 30px;
+        height: 100%;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        color: black;
+      }
+
+      .card-mia h4 {
+        color: #1f3d2b;
+        font-weight: 600;
+      }
+
+      .card-glass {
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 20px;
+        padding: 40px;
+        backdrop-filter: blur(10px);
+      }
+
+      .icon-mia {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        color: #12b886;
+      }
+
+      .btn-mia {
+        background: #12b886;
+        color: #ffffff;
+        padding: 12px 26px;
+        border-radius: 8px;
+        font-weight: 600;
+      }
+
+      .btn-mia:hover {
+        background: #115e59;
+        color: #ffffff;
+      }
+
+      input {
+        color: black;
+      }
+
       @media (max-width: 768px) {
-        .slogan {
-          display: none;
+        .logo {
+          width: 50px;
+          height: 50px;
         }
       }
       .nav-item a {
+        font-weight: bold;
+      }
+      a {
+        color: #12b886;
         font-weight: bold;
       }
     </style>
@@ -30,31 +130,16 @@
       <source src="video/video2.mp4" type="video/mp4" />
     </video>
     <div class="page-container">
-      <div class="container-fluid" style="margin-bottom: -40px">
+      <!-- NAV -->
+      <div class="container-fluid" style="margin-bottom: 40px">
         <div class="row">
           <div class="col-xs-12">
             <div class="cd-slider-nav">
               <nav class="navbar navbar-expand-lg" id="tm-nav">
-                <a
-                  class="navbar-brand d-flex align-items-center mt-4 slogan"
-                  href="#"
-                  style="padding-left: 5%"
+                <img src="img/logo.png" alt="" height="100" class="logo" />
+                <span class="pt-2" style="font-weight: bold; font-size: 1.2rem"
+                  >MIA • Tech • Cloud</span
                 >
-                  <img
-                    src="img/logo.png"
-                    alt="MIA Logo"
-                    height="100"
-                    class="me-2"
-                  />
-                  <span
-                    style="font-size: 2rem; color: #cffaea; font-weight: bold"
-                    >MIA ‣
-                  </span>
-                  <span style="font-size: 1rem" class="slogan"
-                    >&nbsp;Soluciones Tecnológicas</span
-                  >
-                </a>
-
                 <button
                   class="navbar-toggler"
                   type="button"
@@ -76,22 +161,28 @@
                       <a
                         class="nav-link"
                         aria-current="page"
-                        href="#0"
+                        href="#inicio"
                         data-no="1"
                         >Inicio</a
                       >
                       <div class="circle"></div>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#0" data-no="2">Servicios</a>
+                      <a class="nav-link" href="#servicios" data-no="2"
+                        >Servicios</a
+                      >
                       <div class="circle"></div>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#0" data-no="3">Nosotros</a>
+                      <a class="nav-link" href="#nosotros" data-no="3"
+                        >Nosotros</a
+                      >
                       <div class="circle"></div>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#0" data-no="4">Contacto</a>
+                      <a class="nav-link" href="#contacto" data-no="4"
+                        >Contacto</a
+                      >
                       <div class="circle"></div>
                     </li>
                   </ul>
@@ -101,248 +192,202 @@
           </div>
         </div>
       </div>
-      <div class="container-fluid tm-content-container">
-        <ul class="cd-hero-slider mb-0 py-5">
-          <li class="px-3" data-page-no="1">
-            <div class="page-width-1 page-left">
-              <div
-                class="d-flex position-relative tm-border-top tm-border-bottom intro-container"
-              >
-                <div class="intro-left tm-bg-dark" style="text-align: center;">
-                  <h2 class="mb-4">
-                    Impulsamos tu negocio con Inteligencia Artificial
-                  </h2>
 
-                  <p class="mb-4" style="text-align: justify;">
-                    En <strong>MIA</strong> diseñamos soluciones tecnológicas
-                    inteligentes que automatizan procesos, optimizan decisiones
-                    y escalan tu operación con inteligencia artificial, software
-                    a medida y análisis de datos.
-                  </p>
-
-                  <p class="mb-0" style="text-align: justify;">
-                    Transformamos ideas en sistemas eficientes, seguros y listos
-                    para crecer. Desde automatización y desarrollo web hasta
-                    integración de IA aplicada a tu negocio.
-                  </p>
-                </div>
-                <div class="circle intro-circle-1"></div>
-                <div class="circle intro-circle-2"></div>
-                <div class="circle intro-circle-3"></div>
-                <div class="circle intro-circle-4"></div>
-              </div>
-              <div class="text-center">
-                <a
-                  href="#0"
-                  data-page-no="2"
-                  class="btn tm-intro-btn tm-page-link" style="background-color: #1F3D2B; color: #CFFAEA;"
-                >
-                  Ver Servicios
-                </a>
+      <!-- INICIO -->
+      <!-- INICIO -->
+      <section id="inicio" class="section section-light">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6 mb-4">
+              <h1 class="section-title">Tecnología que impulsa tu negocio</h1>
+              <p class="mb-4">
+                En <strong>MIA Soluciones</strong> ayudamos a las empresas a
+                crecer mediante automatización inteligente, análisis de datos y
+                soluciones tecnológicas a medida.
+              </p>
+              <p class="mb-4">
+                Menos tareas repetitivas. Más control, claridad y crecimiento.
+              </p>
+              <a href="#contacto" data-no="4" class="btn btn-mia btn-lg">
+                Agenda una asesoría
+              </a>
+            </div>
+            <div class="col-lg-6">
+              <div class="card-mia">
+                <h4 style="text-align: center">¿Qué nos diferencia?</h4>
+                <ul class="mt-3">
+                  <li>✔ Soluciones prácticas y escalables</li>
+                  <li>✔ Enfoque en resultados reales</li>
+                  <li>✔ Tecnología alineada al negocio</li>
+                  <li>✔ Acompañamiento continuo</li>
+                </ul>
               </div>
             </div>
-          </li>
-          <li data-page-no="2">
-            <!-- Image Carousel -->
-            <div class="mx-auto position-relative gallery-container">
-              <div class="circle intro-circle-1"></div>
-              <div class="circle intro-circle-2"></div>
-              <div class="mx-auto tm-border-top gallery-slider">
-                <figure class="effect-julia item">
-                  <img src="img/gallery-img-01.jpg" alt="Image" />
-                  <figcaption>
-                    <div>
-                      <p>Julia dances in the deep dark</p>
-                    </div>
-                    <a href="#">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-julia item">
-                  <img src="img/gallery-img-02.jpg" alt="Image" />
-                  <figcaption>
-                    <div>
-                      <p>Julia dances in the deep dark</p>
-                    </div>
-                    <a href="#">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-julia item">
-                  <img src="img/gallery-img-03.jpg" alt="Image" />
-                  <figcaption>
-                    <div>
-                      <p>Julia dances in the deep dark</p>
-                    </div>
-                    <a href="#">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-julia item">
-                  <img src="img/gallery-img-04.jpg" alt="Image" />
-                  <figcaption>
-                    <div>
-                      <p>Julia dances in the deep dark</p>
-                    </div>
-                    <a href="#">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-julia item">
-                  <img src="img/gallery-img-05.jpg" alt="Image" />
-                  <figcaption>
-                    <div>
-                      <p>Julia dances in the deep dark</p>
-                    </div>
-                    <a href="#">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-julia item">
-                  <img src="img/gallery-img-06.jpg" alt="Image" />
-                  <figcaption>
-                    <div>
-                      <p>Julia dances in the deep dark</p>
-                    </div>
-                    <a href="#">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-julia item">
-                  <img src="img/gallery-img-07.jpg" alt="Image" />
-                  <figcaption>
-                    <div>
-                      <p>Julia dances in the deep dark</p>
-                    </div>
-                    <a href="#">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-julia item">
-                  <img src="img/gallery-img-08.jpg" alt="Image" />
-                  <figcaption>
-                    <div>
-                      <p>Julia dances in the deep dark</p>
-                    </div>
-                    <a href="#">View more</a>
-                  </figcaption>
-                </figure>
-                <figure class="effect-julia item">
-                  <img src="img/gallery-img-09.jpg" alt="Image" />
-                  <figcaption>
-                    <div>
-                      <p>Julia dances in the deep dark</p>
-                    </div>
-                    <a href="#">View more</a>
-                  </figcaption>
-                </figure>
-              </div>
-            </div>
-          </li>
-          <li data-page-no="3" class="px-3">
-            <div
-              class="position-relative page-width-1 page-right tm-border-top tm-border-bottom"
-            >
-              <div class="circle intro-circle-1"></div>
-              <div class="circle intro-circle-2"></div>
-              <div class="circle intro-circle-3"></div>
-              <div class="circle intro-circle-4"></div>
-              <div class="tm-bg-dark content-pad">
-                <h2 class="mb-4">About our company</h2>
-                <p class="mb-4">
-                  You are <span class="highlight">allowed</span> to use Astro
-                  Motion HTML Template for your websites. You are not allowed to
-                  re-distribute this template ZIP file on any Free CSS template
-                  collection website. Illegal redistribution is strongly
-                  prohibited.
-                </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICIOS -->
+      <!-- SERVICIOS -->
+      <section id="servicios" class="section">
+        <div class="container text-center">
+          <h2 class="section-title">Servicios</h2>
+          <p class="section-subtitle" style="color: white">
+            Soluciones diseñadas para optimizar procesos, mejorar decisiones y
+            escalar tu operación.
+          </p>
+
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="card-mia">
+                <div class="icon-mia">🤖</div>
+                <h4>Automatización</h4>
                 <p>
-                  Praesent auctor rhoncus arcu, vitae blandit est vestibulum sit
-                  amet. Integer erat turpis, vestibulum pellentesque aliquam
-                  ultricies, finibus nec dui. Donec bibendum enim mi, at
-                  tristique leo feugiat at. Thank you for visiting Template Mo.
+                  Digitalizamos procesos manuales, reportes automáticos y flujos
+                  inteligentes que ahorran tiempo y reducen errores.
                 </p>
               </div>
             </div>
-          </li>
-          <li data-page-no="4">
-            <div class="mx-auto page-width-2">
-              <div class="row">
-                <div class="col-md-6 me-0 ms-auto">
-                  <h2 class="mb-4">Contact Us</h2>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6 tm-contact-left">
-                  <form action="#" method="POST" class="contact-form">
-                    <div class="input-group tm-mb-30">
-                      <input
-                        name="name"
-                        type="text"
-                        class="form-control rounded-0 border-top-0 border-end-0 border-start-0"
-                        placeholder="Name"
-                      />
-                    </div>
-                    <div class="input-group tm-mb-30">
-                      <input
-                        name="email"
-                        type="text"
-                        class="form-control rounded-0 border-top-0 border-end-0 border-start-0"
-                        placeholder="Email"
-                      />
-                    </div>
-                    <div class="input-group tm-mb-30">
-                      <textarea
-                        rows="5"
-                        name="message"
-                        class="textarea form-control rounded-0 border-top-0 border-end-0 border-start-0"
-                        placeholder="Message"
-                      ></textarea>
-                    </div>
-                    <div class="input-group justify-content-end">
-                      <input
-                        type="submit"
-                        class="btn btn-primary tm-btn-pad-2"
-                        value="Send"
-                      />
-                    </div>
-                  </form>
-                </div>
-                <div class="col-md-6 tm-contact-right">
-                  <p class="mb-4">
-                    Integer erat turpis, vestibulum pellentesque aliquam
-                    ultricies, finibus nec dui. Donec bibendum enim mi, at
-                    tristique leo feugiat at.
-                  </p>
-                  <div>
-                    Email:
-                    <a href="mailto:info@company.com" class="tm-link-white"
-                      >info@company.com</a
-                    >
-                  </div>
-                  <div class="tm-mb-45">
-                    Tel:
-                    <a href="tel:0100200340" class="tm-link-white"
-                      >010-020-0340</a
-                    >
-                  </div>
-                  <!-- Map -->
-                  <div class="map-outer">
-                    <div class="gmap-canvas">
-                      <iframe
-                        width="100%"
-                        height="400"
-                        id="gmap-canvas"
-                        src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                        frameborder="0"
-                        scrolling="no"
-                        marginheight="0"
-                        marginwidth="0"
-                      ></iframe>
-                    </div>
-                  </div>
-                </div>
+
+            <div class="col-md-4">
+              <div class="card-mia">
+                <div class="icon-mia">📊</div>
+                <h4>Análisis de Datos</h4>
+                <p>
+                  Dashboards, KPIs y reportes claros para tomar decisiones
+                  basadas en información real.
+                </p>
               </div>
             </div>
-          </li>
-        </ul>
-      </div>
+
+            <div class="col-md-4">
+              <div class="card-mia">
+                <div class="icon-mia">💻</div>
+                <h4>Soluciones a Medida</h4>
+                <p>
+                  Desarrollo de herramientas, integraciones y sistemas
+                  personalizados según tu negocio.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NOSOTROS -->
+      <!-- NOSOTROS -->
+      <section id="nosotros" class="section section-dark">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+              <div class="card-glass">
+                <h2 class="section-title">Sobre MIA Soluciones</h2>
+                <p class="mt-4">
+                  Somos un equipo enfocado en crear soluciones tecnológicas que
+                  realmente funcionen. Entendemos el negocio antes de proponer
+                  tecnología.
+                </p>
+                <p class="mt-3">
+                  Nuestro objetivo es convertir la tecnología en una ventaja
+                  competitiva, no en una complicación.
+                </p>
+                <p class="fw-bold mt-4">
+                  Pensamos en procesos. Construimos soluciones. Acompañamos el
+                  crecimiento.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACTO -->
+      <!-- CONTACTO -->
+      <section id="contacto" class="section section-light">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6 mb-4">
+              <h2 class="section-title">Hablemos</h2>
+              <p class="mb-4">
+                Cuéntanos tu necesidad y te ayudamos a encontrar la mejor
+                solución tecnológica para tu negocio.
+              </p>
+              <p>
+                📧 soluciones@miatech.cloud <br />
+                📲
+                <a href="https://wa.me/573337442515" target="_blank"
+                  >+57 333 744 2515</a
+                >
+              </p>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="card-mia">
+                <form name="contact" method="POST" data-netlify="true">
+                  <input type="hidden" name="form-name" value="contact" />
+
+                  <div class="mb-3">
+                    <label
+                      for="nombre"
+                      class="form-label"
+                      style="font-weight: 600"
+                      >Nombre</label
+                    >
+                    <input
+                      id="nombre"
+                      class="form-control"
+                      type="text"
+                      name="nombre"
+                      required
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label
+                      for="email"
+                      class="form-label"
+                      style="font-weight: 600"
+                      >Email</label
+                    >
+                    <input
+                      id="email"
+                      class="form-control"
+                      type="email"
+                      name="email"
+                      required
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label
+                      for="mensaje"
+                      class="form-label"
+                      style="font-weight: 600"
+                      >Mensaje</label
+                    >
+                    <textarea
+                      id="mensaje"
+                      class="form-control"
+                      name="mensaje"
+                      rows="4"
+                      required
+                    ></textarea>
+                  </div>
+
+                  <button type="submit" class="btn btn-mia w-100">
+                    Enviar mensaje
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <a href="#inicio" data-no="1" class="btn-back-floating"> ⬆ </a>
+
       <div class="container-fluid">
-        <footer class="row mx-auto tm-footer">
-        </footer>
+        <footer class="row mx-auto tm-footer"></footer>
       </div>
     </div>
     <!-- Preloader, https://ihatetomatoes.net/create-custom-preloading-screen/ -->
