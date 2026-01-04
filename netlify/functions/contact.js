@@ -10,7 +10,7 @@ exports.handler = async (event) => {
 
     await resend.emails.send({
       from: "MIA Soluciones <contacto@miatech.cloud>",
-      to: ["TU_CORREO@tudominio.com"],
+      to: ["soluciones@miatech.cloud"],
       subject: "Nuevo contacto desde el sitio web",
       html: `
         <h2>Nuevo mensaje recibido</h2>
