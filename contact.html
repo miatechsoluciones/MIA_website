@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto | MIA • Tech • Cloud</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/mia-theme.css" />
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="icon" href="img/logo.png" type="image/png" />
+  </head>
+  <body class="bg-black text-white">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index">
+          <img src="img/logo.png" alt="MIA • Tech • Cloud Logo" />
+          <span class="text-white fw-bold">MIA • Tech • Cloud</span>
+        </a>
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          aria-controls="navbarNav"
+        >
+          <span style="filter: invert(1)">☰</span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav align-items-center gap-3">
+            <li class="nav-item">
+              <a class="nav-link" href="index">Inicio</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                >Servicios</a
+              >
+              <ul class="dropdown-menu bg-dark border-secondary">
+                <li>
+                  <a class="dropdown-item text-white" href="services/automation"
+                    >Automatización</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item text-white" href="services/bi"
+                    >BI & Analytics</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item text-white" href="services/software"
+                    >Software a Medida</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="contact">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="section pb-0 pt-5 mt-5 text-center">
+      <div class="container">
+        <h1 class="display-4 mb-3">Hablemos de tu Proyecto</h1>
+        <p class="text-secondary lead mx-auto" style="max-width: 700px">
+          Cuéntanos tus desafíos y diseñaremos una solución a medida. <br />
+          Respuesta garantizada en <strong>menos de 2 horas</strong>.
+        </p>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <!-- Info Column -->
+          <div class="col-lg-4 mb-5">
+            <div
+              class="h-100 p-4 rounded-4 bg-dark border border-secondary border-opacity-25"
+            >
+              <h4 class="mb-4">Información de Contacto</h4>
+
+              <div class="d-flex align-items-start gap-3 mb-4">
+                <i data-lucide="mail" class="text-green mt-1"></i>
+                <div>
+                  <strong class="d-block text-white">Email</strong>
+                  <a
+                    href="mailto:soluciones@miatech.cloud"
+                    class="text-secondary text-decoration-none"
+                    >soluciones@miatech.cloud</a
+                  >
+                </div>
+              </div>
+
+              <div class="d-flex align-items-start gap-3 mb-4">
+                <i data-lucide="phone" class="text-green mt-1"></i>
+                <div>
+                  <strong class="d-block text-white"
+                    >WhatsApp / Teléfono</strong
+                  >
+                  <a
+                    href="https://wa.me/573337442515"
+                    class="text-secondary text-decoration-none"
+                    >+57 333 744 2515</a
+                  >
+                </div>
+              </div>
+
+              <div class="d-flex align-items-start gap-3 mb-4">
+                <i data-lucide="clock" class="text-green mt-1"></i>
+                <div>
+                  <strong class="d-block text-white">Horario</strong>
+                  <span class="text-secondary">Lunes a Viernes: 8am - 6pm</span>
+                </div>
+              </div>
+
+              <hr class="border-secondary opacity-25 my-4" />
+
+              <h5 class="mb-3">FAQ Rápido</h5>
+              <div class="accordion accordion-flush" id="faqAccordion">
+                <div class="accordion-item bg-transparent">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed bg-transparent text-white shadow-none ps-0"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq1"
+                    >
+                      ¿Tienen costo las asesorías?
+                    </button>
+                  </h2>
+                  <div
+                    id="faq1"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#faqAccordion"
+                  >
+                    <div class="accordion-body text-secondary ps-0 pt-0">
+                      No, la primera sesión de diagnóstico es 100% gratuita y
+                      sin compromiso.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form Column -->
+          <div class="col-lg-7">
+            <div class="card-mia">
+              <form id="contact-form">
+                <!-- Standard Fields -->
+                <h4 class="mb-4">Envíanos un mensaje</h4>
+
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label text-white">Nombre *</label>
+                    <input
+                      type="text"
+                      name="name"
+                      class="form-control bg-black border-secondary text-white"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label text-white">Email *</label>
+                    <input
+                      type="email"
+                      name="email"
+                      class="form-control bg-black border-secondary text-white"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <!-- Extra Fields -->
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label text-white"
+                      >Teléfono / WhatsApp</label
+                    >
+                    <input
+                      type="text"
+                      name="telefono"
+                      class="form-control bg-black border-secondary text-white"
+                    />
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label text-white">Empresa</label>
+                    <input
+                      type="text"
+                      name="empresa"
+                      class="form-control bg-black border-secondary text-white"
+                    />
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label text-white"
+                    >¿Qué servicio te interesa?</label
+                  >
+                  <select
+                    name="servicio_interes"
+                    class="form-select bg-black border-secondary text-white"
+                  >
+                    <option value="General">Consulta General</option>
+                    <option value="Automatización">
+                      Automatización de Procesos
+                    </option>
+                    <option value="BI">Business Intelligence & Datos</option>
+                    <option value="Software">Desarrollo a Medida</option>
+                    <option value="VPS">Infraestructura / VPS</option>
+                  </select>
+                </div>
+
+                <div class="mb-4">
+                  <label class="form-label text-white"
+                    >Detalles del Proyecto *</label
+                  >
+                  <textarea
+                    name="message"
+                    rows="5"
+                    class="form-control bg-black border-secondary text-white"
+                    required
+                    placeholder="Cuéntanos brevemente qué necesitas resolver..."
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100 btn-lg">
+                  Enviar Solicitud
+                </button>
+                <p id="form-status" class="text-center mt-3 mb-0 fw-bold"></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="py-5 border-top border-secondary border-opacity-10 text-center"
+    >
+      <div class="container">
+        <p class="text-secondary">&copy; 2026 MIA • Tech • Cloud.</p>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Widget -->
+    <a
+      href="https://wa.me/573337442515"
+      class="whatsapp-float bg-success"
+      target="_blank"
+    >
+      <i data-lucide="message-circle"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

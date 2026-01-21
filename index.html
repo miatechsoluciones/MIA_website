@@ -1,488 +1,674 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MIA • Tech • Cloud</title>
+    <title>
+      MIA • Tech • Cloud | Automatización Inteligente y Soluciones Tech
+    </title>
+    <meta
+      name="description"
+      content="Automatización inteligente, análisis de datos y soluciones tecnológicas a medida para escalar tu negocio."
+    />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/templatemo-style.css" />
+
+    <!-- Styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/mia-theme.css" />
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
     <link rel="icon" href="img/logo.png" type="image/png" />
-    <style>
-      .btn-back-floating {
-        position: fixed;
-        bottom: 25px;
-        right: 25px;
-        width: 50px;
-        height: 50px;
-        background: #12b886;
-        color: #ffffff;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.4rem;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-        z-index: 999;
-        transition: all 0.3s ease;
-      }
-
-      .btn-back-floating:hover {
-        background: #115e59;
-        transform: translateY(-4px);
-      }
-
-      .section {
-        padding: 40px 0;
-      }
-
-      .section-light {
-        background: rgba(255, 255, 255, 0);
-        backdrop-filter: blur(10px);
-      }
-
-      .section-dark {
-        background: linear-gradient(135deg, #12b886, #1f3d2b);
-        color: #ffffff;
-        border-radius: 10px;
-      }
-
-      .section-title {
-        font-weight: 700;
-        font-size: 2.2rem;
-        margin-bottom: 20px;
-      }
-
-      .section-subtitle {
-        max-width: 700px;
-        margin: 0 auto 50px;
-        font-size: 1.1rem;
-        color: #6b7280;
-      }
-
-      .card-mia {
-        background: #ffffff;
-        border-radius: 18px;
-        padding: 30px;
-        height: 100%;
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        color: black;
-      }
-
-      .card-mia h4 {
-        color: #1f3d2b;
-        font-weight: 600;
-      }
-
-      .card-glass {
-        background: rgba(255, 255, 255, 0.15);
-        border-radius: 20px;
-        padding: 40px;
-        backdrop-filter: blur(10px);
-      }
-
-      .icon-mia {
-        font-size: 2.5rem;
-        margin-bottom: 15px;
-        color: #12b886;
-      }
-
-      .btn-mia {
-        background: #12b886;
-        color: #ffffff;
-        padding: 12px 26px;
-        border-radius: 8px;
-        font-weight: 600;
-      }
-
-      .btn-mia:hover {
-        background: #115e59;
-        color: #ffffff;
-      }
-
-      input,
-      textarea {
-        color: black !important;
-      }
-
-      @media (max-width: 768px) {
-        .logo {
-          width: 50px;
-          height: 50px;
-        }
-      }
-      .nav-item a {
-        font-weight: bold;
-      }
-      a {
-        color: #12b886;
-        font-weight: bold;
-      }
-      input:hover,
-      textarea:hover {
-        color: inherit !important;
-        opacity: 1 !important;
-        cursor: pointer;
-      }
-    </style>
   </head>
   <body>
-    <video autoplay muted loop id="bg-video">
-      <source src="video/video2.mp4" type="video/mp4" />
-    </video>
-    <div class="page-container">
-      <!-- NAV -->
-      <div class="container-fluid" style="margin-bottom: 40px">
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="cd-slider-nav">
-              <nav class="navbar navbar-expand-lg" id="tm-nav">
-                <img src="img/logo.png" alt="" height="100" class="logo" />
-                <span class="pt-2" style="font-weight: bold; font-size: 1.1rem"
-                  >MIA • Tech • Cloud</span
-                >
-                <button
-                  class="navbar-toggler"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#navbar-supported-content"
-                  aria-controls="navbarSupportedContent"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-                  style="margin-top: 20px"
-                >
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div
-                  class="collapse navbar-collapse"
-                  id="navbar-supported-content"
-                >
-                  <ul class="navbar-nav mb-2 mb-lg-0">
-                    <li class="nav-item selected">
-                      <a
-                        class="nav-link"
-                        aria-current="page"
-                        href="#inicio"
-                        data-no="1"
-                        >Inicio</a
-                      >
-                      <div class="circle"></div>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#servicios" data-no="2"
-                        >Servicios</a
-                      >
-                      <div class="circle"></div>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#nosotros" data-no="3"
-                        >Nosotros</a
-                      >
-                      <div class="circle"></div>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#contacto" data-no="4"
-                        >Contacto</a
-                      >
-                      <div class="circle2"></div>
-                    </li>
-                  </ul>
+    <!-- Background Animation -->
+    <div class="tech-bg"></div>
+    <div class="particles-container"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+          <img src="img/logo.png" alt="MIA • Tech • Cloud Logo" />
+          <span class="text-white fw-bold">MIA • Tech • Cloud</span>
+        </a>
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          aria-controls="navbarNav"
+        >
+          <span style="filter: invert(1)">☰</span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav align-items-center gap-3">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Inicio</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                >Servicios</a
+              >
+              <ul class="dropdown-menu bg-dark border-secondary">
+                <li>
+                  <a class="dropdown-item text-white" href="services/automation"
+                    >Automatización</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item text-white" href="services/bi"
+                    >BI & Analytics</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item text-white" href="services/software"
+                    >Software a Medida</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#casos">Casos de Éxito</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-primary" href="contact">Agenda Asesoría</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="inicio"
+      class="d-flex align-items-center min-vh-100 position-relative pt-5"
+    >
+      <div class="container pt-5">
+        <div class="row align-items-center">
+          <div class="col-lg-7">
+            <h1 class="display-3 mb-4">
+              Automatización Inteligente para
+              <span class="text-green">Escalar Tu Negocio</span>
+            </h1>
+            <p class="lead text-secondary mb-5 pe-lg-5">
+              Transforma datos en decisiones. Convierte procesos manuales en
+              flujos automáticos. Escala sin límites.
+            </p>
+            <div class="d-flex gap-3 flex-wrap">
+              <a href="#contacto" class="btn btn-primary btn-lg"
+                >Agenda Asesoría Gratuita</a
+              >
+              <a href="#casos" class="btn btn-outline btn-lg"
+                >Ver Casos de Éxito</a
+              >
+            </div>
+          </div>
+          <div class="col-lg-5 mt-5 mt-lg-0">
+            <div class="glass-effect p-4 rounded-4 position-relative">
+              <!-- Simulated Code/Process Flow -->
+              <div
+                class="d-flex justify-content-between mb-3 text-secondary text-sm"
+              >
+                <span>Process: Order Sync</span>
+                <span class="text-green">● Active</span>
+              </div>
+              <div
+                class="bg-black p-3 rounded mb-2 text-success font-monospace"
+                style="font-size: 0.8rem"
+              >
+                > Trigger: New Order Received<br />
+                > Action: Validate Inventory<br />
+                > Action: Update CRM<br />
+                > Action: Send Confirmation WhatsApp<br />
+                > Status: Complete (0.4s)
+              </div>
+              <div
+                class="d-flex justify-content-between align-items-center mt-4"
+              >
+                <div>
+                  <h3 class="h2 mb-0 fw-bold">1,240</h3>
+                  <small class="text-secondary">Automatizaciones hoy</small>
                 </div>
-              </nav>
+                <i
+                  data-lucide="activity"
+                  class="text-green"
+                  style="width: 40px; height: 40px"
+                ></i>
+              </div>
             </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- INICIO -->
+    <!-- Value Stats -->
+    <section id="beneficios" class="section">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-3 col-6">
+            <div class="card-mia h-100 text-center">
+              <i
+                data-lucide="clock"
+                class="text-green mb-3 mx-auto"
+                style="width: 32px; height: 32px"
+              ></i>
+              <h3 class="h4">500+</h3>
+              <p class="text-secondary small">Horas ahorradas/mes</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="card-mia h-100 text-center">
+              <i
+                data-lucide="shield-check"
+                class="text-green mb-3 mx-auto"
+                style="width: 32px; height: 32px"
+              ></i>
+              <h3 class="h4">95%</h3>
+              <p class="text-secondary small">Reducción de errores</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="card-mia h-100 text-center">
+              <i
+                data-lucide="zap"
+                class="text-green mb-3 mx-auto"
+                style="width: 32px; height: 32px"
+              ></i>
+              <h3 class="h4">10x</h3>
+              <p class="text-secondary small">Más rápido en reportes</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="card-mia h-100 text-center">
+              <i
+                data-lucide="trending-up"
+                class="text-green mb-3 mx-auto"
+                style="width: 32px; height: 32px"
+              ></i>
+              <h3 class="h4">60 días</h3>
+              <p class="text-secondary small">ROI Positivo Estimado</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <section id="inicio" class="section section-light">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-6 mb-4">
-              <h1 class="section-title">
-                Tecnología y automatización para escalar tu negocio
-              </h1>
+    <!-- Services -->
+    <section id="servicios" class="section">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="display-5 mb-3">Nuestras Soluciones</h2>
+          <p class="text-secondary">
+            Tecnología diseñada para resultados tangibles.
+          </p>
+        </div>
 
-              <p class="mb-4">
-                En <strong>MIA • Tech • Cloud</strong> ayudamos a empresas y
-                emprendedores a optimizar sus procesos mediante
-                <strong>automatización inteligente</strong>,
-                <strong>análisis de datos</strong> y
-                <strong>soluciones tecnológicas a medida</strong>.
+        <div class="row g-4 justify-content-center">
+          <!-- Service 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card-mia h-100">
+              <div
+                class="mb-4 d-inline-block p-3 rounded-circle bg-dark border border-secondary border-opacity-25"
+              >
+                <i data-lucide="bot" class="text-green"></i>
+              </div>
+              <h4>Automatización Inteligente</h4>
+              <p class="text-secondary mb-4">
+                Automatiza tareas repetitivas con n8n, Make y soluciones custom.
               </p>
-
-              <p class="mb-4">
-                Diseñamos e implementamos sistemas digitales que permiten a las
-                organizaciones trabajar de forma más eficiente, tomar mejores
-                decisiones y crecer de manera sostenible.
-              </p>
-
-              <ul class="mb-4">
-                <li>
-                  ✔ Automatización de procesos administrativos y operativos
-                </li>
-                <li>
-                  ✔ Análisis y visualización de datos para la toma de decisiones
-                </li>
-                <li>✔ Desarrollo de herramientas y sistemas personalizados</li>
-                <li>
-                  ✔ Integración de plataformas y optimización de flujos de
-                  trabajo
-                </li>
-                <li>✔ Reducción de tiempos, costos y errores operativos</li>
+              <ul class="text-secondary mb-4 small ps-3">
+                <li class="mb-2">● Sincronización CRM ↔ Email</li>
+                <li class="mb-2">● Facturación automática</li>
+                <li class="mb-2">● Notificaciones custom</li>
               </ul>
-
-              <p class="fw-semibold mb-4">
-                Menos tareas repetitivas. Más control, claridad y crecimiento
-                sostenible.
-              </p>
-
-              <a href="#contacto" data-no="4" class="btn btn-mia btn-lg">
-                Agenda una asesoría
+              <a
+                href="contact?service=automatizacion"
+                class="text-green fw-bold text-decoration-none"
+              >
+                Descubre más →
               </a>
             </div>
-
-            <div class="col-lg-6">
-              <div class="card-mia">
-                <h4 class="text-center">¿Por qué elegir MIA • Tech • Cloud?</h4>
-                <ul class="mt-4">
-                  <li>
-                    ✔ Soluciones tecnológicas alineadas a los objetivos del
-                    negocio
-                  </li>
-                  <li>✔ Enfoque práctico orientado a resultados reales</li>
-                  <li>✔ Sistemas escalables que crecen junto a tu empresa</li>
-                  <li>✔ Comunicación clara y acompañamiento continuo</li>
-                  <li>✔ Experiencia en automatización y análisis de datos</li>
-                  <li>
-                    ✔ Tecnología como herramienta estratégica, no como
-                    complejidad
-                  </li>
-                </ul>
-              </div>
-            </div>
           </div>
-        </div>
-      </section>
 
-      <!-- SERVICIOS -->
-      <section id="servicios" class="section">
-        <div class="container text-center">
-          <h2 class="section-title">Servicios</h2>
-          <p class="section-subtitle" style="color: white">
-            Soluciones diseñadas para optimizar procesos, mejorar decisiones y
-            escalar tu operación.
-          </p>
-
-          <div class="row g-4">
-            <div class="col-md-4">
-              <div class="card-mia">
-                <div class="icon-mia">🤖</div>
-                <h4>Automatización</h4>
-                <p>
-                  Digitalizamos procesos manuales, reportes automáticos y flujos
-                  inteligentes que ahorran tiempo y reducen errores.
-                </p>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card-mia">
-                <div class="icon-mia">📊</div>
-                <h4>Análisis de Datos</h4>
-                <p>
-                  Dashboards, KPIs y reportes claros para tomar decisiones
-                  basadas en información real.
-                </p>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card-mia">
-                <div class="icon-mia">💻</div>
-                <h4>Soluciones a Medida</h4>
-                <p>
-                  Desarrollo de herramientas, integraciones y sistemas
-                  personalizados según tu negocio.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- NOSOTROS -->
-      <!-- NOSOTROS -->
-      <section id="nosotros" class="section section-dark">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-              <div class="card-glass">
-                <h2 class="section-title">Sobre MIA • Tech • Cloud</h2>
-                <p class="mt-4">
-                  Somos un equipo enfocado en crear soluciones tecnológicas que
-                  realmente funcionen. Entendemos el negocio antes de proponer
-                  tecnología.
-                </p>
-                <p class="mt-3">
-                  Nuestro objetivo es convertir la tecnología en una ventaja
-                  competitiva, no en una complicación.
-                </p>
-                <p class="fw-bold mt-4">
-                  Pensamos en procesos. Construimos soluciones. Acompañamos el
-                  crecimiento.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTACTO -->
-      <!-- CONTACTO -->
-      <section id="contacto" class="section section-light">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-6 mb-4">
-              <h2 class="section-title">Hablemos</h2>
-              <p class="mb-4">
-                Cuéntanos tu necesidad y te ayudamos a encontrar la mejor
-                solución tecnológica para tu negocio.
-              </p>
-              <p>
-                📧 soluciones@miatech.cloud <br />
-                📲
-                <a href="https://wa.me/573337442515" target="_blank"
-                  >+57 333 744 2515</a
-                >
-              </p>
-            </div>
-
-            <div class="col-lg-6">
-              <div class="card-mia">
-                <form id="contact-form">
-                  <input type="hidden" name="form-name" value="contact" />
-
-                  <div class="mb-3">
-                    <label
-                      for="nombre"
-                      class="form-label"
-                      style="font-weight: 600"
-                      >Nombre</label
-                    >
-                    <input
-                      id="nombre"
-                      class="form-control"
-                      type="text"
-                      name="nombre"
-                      required
-                    />
-                  </div>
-
-                  <div class="mb-3">
-                    <label
-                      for="email"
-                      class="form-label"
-                      style="font-weight: 600"
-                      >Email</label
-                    >
-                    <input
-                      id="email"
-                      class="form-control"
-                      type="email"
-                      name="email"
-                      required
-                    />
-                  </div>
-
-                  <div class="mb-3">
-                    <label
-                      for="mensaje"
-                      class="form-label"
-                      style="font-weight: 600"
-                      >Mensaje</label
-                    >
-                    <textarea
-                      id="mensaje"
-                      class="form-control"
-                      name="mensaje"
-                      rows="4"
-                      required
-                    ></textarea>
-                  </div>
-
-                  <button type="submit" class="btn btn-mia w-100">
-                    Enviar mensaje
-                  </button>
-                </form>
-                <br />
-                <p
-                  id="form-status"
-                  style="text-align: center; font-weight: 600; font-size: 1rem"
-                ></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <a href="#inicio" data-no="1" class="btn-back-floating"> ⬆ </a>
-
-      <div class="container-fluid">
-        <footer class="row mx-auto tm-footer">
-          <div class="col-12 text-center" style="padding: 40px 0; color: white">
-            <p>
-              &copy; 2026 MIA • Tech • Cloud. Todos los derechos reservados.
-            </p>
-            <p>
-              <a
-                href="terminos-y-condiciones.html"
-                style="color: #12b886; font-weight: 500"
-                >Términos y Condiciones</a
+          <!-- Service 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card-mia h-100">
+              <div
+                class="mb-4 d-inline-block p-3 rounded-circle bg-dark border border-secondary border-opacity-25"
               >
+                <i data-lucide="bar-chart-2" class="text-green"></i>
+              </div>
+              <h4>BI & Analytics</h4>
+              <p class="text-secondary mb-4">
+                Dashboards en tiempo real con Looker Studio y Power BI.
+              </p>
+              <ul class="text-secondary mb-4 small ps-3">
+                <li class="mb-2">● KPIs financieros consolidados</li>
+                <li class="mb-2">● Predicción de ventas</li>
+                <li class="mb-2">● Retención de clientes</li>
+              </ul>
+              <a
+                href="contact?service=bi"
+                class="text-green fw-bold text-decoration-none"
+              >
+                Descubre más →
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card-mia h-100">
+              <div
+                class="mb-4 d-inline-block p-3 rounded-circle bg-dark border border-secondary border-opacity-25"
+              >
+                <i data-lucide="code" class="text-green"></i>
+              </div>
+              <h4>Software a Medida</h4>
+              <p class="text-secondary mb-4">
+                Aplicaciones web personalizadas para problemas únicos.
+              </p>
+              <ul class="text-secondary mb-4 small ps-3">
+                <li class="mb-2">● Portales de clientes</li>
+                <li class="mb-2">● Sistemas de inventario</li>
+                <li class="mb-2">● Apps de gestión interna</li>
+              </ul>
+              <a
+                href="contact?service=software"
+                class="text-green fw-bold text-decoration-none"
+              >
+                Descubre más →
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card-mia h-100">
+              <div
+                class="mb-4 d-inline-block p-3 rounded-circle bg-dark border border-secondary border-opacity-25"
+              >
+                <i data-lucide="server" class="text-green"></i>
+              </div>
+              <h4>VPS & Cloud</h4>
+              <p class="text-secondary mb-4">
+                Infraestructura optimizada, segura y escalable.
+              </p>
+              <a
+                href="contact?service=vps"
+                class="text-green fw-bold text-decoration-none"
+              >
+                Descubre más →
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card-mia h-100">
+              <div
+                class="mb-4 d-inline-block p-3 rounded-circle bg-dark border border-secondary border-opacity-25"
+              >
+                <i data-lucide="link" class="text-green"></i>
+              </div>
+              <h4>Integraciones</h4>
+              <p class="text-secondary mb-4">
+                Conecta tus herramientas: WhatsApp, Stripe, HubSpot, etc.
+              </p>
+              <a
+                href="contact?service=integraciones"
+                class="text-green fw-bold text-decoration-none"
+              >
+                Descubre más →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section bg-dark">
+      <div class="container">
+        <h2 class="text-center mb-5">Cómo Trabajamos</h2>
+        <div class="row text-center position-relative">
+          <!-- Connecting Line (Desktop) -->
+          <div
+            class="d-none d-lg-block w-75 position-absolute start-50 translate-middle-x top-50 border-top border-secondary border-opacity-25"
+            style="z-index: 0"
+          ></div>
+
+          <div class="col-lg-3 col-6 mb-4 position-relative" style="z-index: 1">
+            <div
+              class="bg-black d-inline-flex p-3 rounded-circle border border-success mb-3"
+            >
+              <span class="h4 mb-0 text-white">1</span>
+            </div>
+            <h5 class="mt-2">Diagnóstico</h5>
+          </div>
+          <div class="col-lg-3 col-6 mb-4 position-relative" style="z-index: 1">
+            <div
+              class="bg-black d-inline-flex p-3 rounded-circle border border-light mb-3"
+            >
+              <span class="h4 mb-0 text-white">2</span>
+            </div>
+            <h5 class="mt-2">Propuesta</h5>
+          </div>
+          <div class="col-lg-3 col-6 mb-4 position-relative" style="z-index: 1">
+            <div
+              class="bg-black d-inline-flex p-3 rounded-circle border border-light mb-3"
+            >
+              <span class="h4 mb-0 text-white">3</span>
+            </div>
+            <h5 class="mt-2">Ejecución</h5>
+          </div>
+          <div class="col-lg-3 col-6 mb-4 position-relative" style="z-index: 1">
+            <div
+              class="bg-black d-inline-flex p-3 rounded-circle border border-success mb-3"
+            >
+              <span class="h4 mb-0 text-white">4</span>
+            </div>
+            <h5 class="mt-2">Soporte</h5>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Success Cases Slider (Static for V1) -->
+    <section id="casos" class="section">
+      <div class="container">
+        <h2 class="text-center mb-5">Casos de Éxito</h2>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card-mia h-100">
+              <div class="badge bg-success mb-2">E-commerce</div>
+              <h5 class="text-white">Tienda de Moda Online</h5>
+              <p class="text-secondary small">
+                Automatización de inventario y dashboard de ventas.
+              </p>
+              <hr class="border-secondary opacity-25" />
+              <div class="row text-center">
+                <div class="col">
+                  <strong class="d-block text-white">98%</strong>
+                  <small class="text-secondary small">Tiempo Ahorrado</small>
+                </div>
+                <div class="col">
+                  <strong class="d-block text-white">+35%</strong>
+                  <small class="text-secondary small">Ventas</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card-mia h-100">
+              <div class="badge bg-info text-dark mb-2">Salud</div>
+              <h5 class="text-white">Clínica Médica</h5>
+              <p class="text-secondary small">
+                Recordatorios por WhatsApp y Agendamiento Web.
+              </p>
+              <hr class="border-secondary opacity-25" />
+              <div class="row text-center">
+                <div class="col">
+                  <strong class="d-block text-white">-70%</strong>
+                  <small class="text-secondary small">Ausentismo</small>
+                </div>
+                <div class="col">
+                  <strong class="d-block text-white">+40</strong>
+                  <small class="text-secondary small">Citas/Mes</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card-mia h-100">
+              <div class="badge bg-warning text-dark mb-2">Inmobiliaria</div>
+              <h5 class="text-white">Agencia de Bienes Raíces</h5>
+              <p class="text-secondary small">
+                Nutrición de leads automática y sincronización de portales.
+              </p>
+              <hr class="border-secondary opacity-25" />
+              <div class="row text-center">
+                <div class="col">
+                  <strong class="d-block text-white">3x</strong>
+                  <small class="text-secondary small">Más Leads</small>
+                </div>
+                <div class="col">
+                  <strong class="d-block text-white">0</strong>
+                  <small class="text-secondary small">Leads Perdidos</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card-mia h-100">
+              <div class="badge bg-primary mb-2">Logística</div>
+              <h5 class="text-white">Transporte Nacional</h5>
+              <p class="text-secondary small">
+                Reportes en tiempo real y tracking automático por WhatsApp.
+              </p>
+              <hr class="border-secondary opacity-25" />
+              <div class="row text-center">
+                <div class="col">
+                  <strong class="d-block text-white">100%</strong>
+                  <small class="text-secondary small">Visibilidad</small>
+                </div>
+                <div class="col">
+                  <strong class="d-block text-white">-25%</strong>
+                  <small class="text-secondary small">Costos Ops</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <a href="#contacto" class="btn btn-outline">Ver todos los casos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <section id="contacto" class="section bg-dark">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center mb-5">
+            <h2>¿Listo para Automatizar tu Negocio?</h2>
+            <p class="text-secondary">
+              Agenda una asesoría gratuita sin compromiso.
             </p>
           </div>
-        </footer>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <div class="card-mia">
+              <form id="contact-form">
+                <!-- Standard Fields -->
+                <div class="mb-3">
+                  <label class="form-label text-white">Nombre</label>
+                  <input
+                    type="text"
+                    name="name"
+                    class="form-control bg-black border-secondary text-white"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label text-white">Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    class="form-control bg-black border-secondary text-white"
+                    required
+                  />
+                </div>
+                <!-- Extra Fields (Bundled via JS) -->
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label text-white"
+                      >Teléfono (Opcional)</label
+                    >
+                    <input
+                      type="text"
+                      name="telefono"
+                      class="form-control bg-black border-secondary text-white"
+                    />
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label text-white"
+                      >Empresa (Opcional)</label
+                    >
+                    <input
+                      type="text"
+                      name="empresa"
+                      class="form-control bg-black border-secondary text-white"
+                    />
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label text-white"
+                    >¿En qué podemos ayudarte?</label
+                  >
+                  <textarea
+                    name="message"
+                    rows="4"
+                    class="form-control bg-black border-secondary text-white"
+                    required
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">
+                  Enviar Solicitud
+                </button>
+                <p id="form-status" class="text-center mt-3 mb-0"></p>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <!-- Preloader, https://ihatetomatoes.net/create-custom-preloading-screen/ -->
+    </section>
 
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/templatemo-script.js"></script>
+    <footer class="py-5 border-top border-secondary border-opacity-10">
+      <div class="container text-center">
+        <p class="text-secondary mb-3">
+          &copy; 2026 MIA • Tech • Cloud. Todos los derechos reservados.
+        </p>
+        <div class="d-flex justify-content-center gap-3">
+          <a
+            href="legal/terms"
+            class="text-secondary small text-decoration-underline"
+            >Términos y Condiciones</a
+          >
+          <a
+            href="legal/privacy"
+            class="text-secondary small text-decoration-underline"
+            >Política de Privacidad</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Widget -->
+    <a
+      href="https://wa.me/573337442515"
+      class="whatsapp-float bg-success"
+      target="_blank"
+    >
+      <i data-lucide="message-circle"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
     <script>
-      document
-        .getElementById("contact-form")
-        .addEventListener("submit", async (e) => {
-          e.preventDefault();
-
-          const form = e.target;
-          const data = {
-            name: form.nombre.value,
-            email: form.email.value,
-            message: form.mensaje.value,
-          };
-
-          console.log(data);
-
-          const res = await fetch("/.netlify/functions/contact", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(data),
-          });
-
-          const result = await res.json();
-
-          document.getElementById("form-status").innerText = result.message;
-          form.reset();
-        });
+      lucide.createIcons();
     </script>
+
+    <!-- Chatbot n8n -->
+    <script type="module">
+      import { createChat } from "https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js";
+
+      createChat({
+        webhookUrl:
+          "https://proimetn8n.miatech.cloud/webhook/e99364f3-e95e-4a8f-a0e1-2ae27fce361c/chat",
+        mode: "window",
+        showWelcomeScreen: true,
+        welcomeScreenTitle: "¡Hola! Bienvenido a MIA",
+        welcomeScreenSubtitle: "Tu partner en automatización inteligente.",
+        title: "MIA • Tech • Cloud",
+        subtitle: "Asistente Virtual",
+        initialMessages: [
+          "¡Hola! 👋 Soy el asistente de **MIA • Tech • Cloud**.",
+          "Estamos aquí para ayudarte a escalar tu negocio con tecnología.",
+          "¿En qué podemos apoyarte hoy?",
+        ],
+        showPoweredBy: false,
+        i18n: {
+          en: {
+            title: "MIA • Tech • Cloud",
+            subtitle: "Soporte Inteligente",
+            getStarted: "Hablar con un experto AI",
+            inputPlaceholder: "Escribe tu consulta aquí...",
+          },
+        },
+        styleConfiguration: {
+          fontFamily: "Quicksand, sans-serif",
+          theme: {
+            "--chat-light-primary": "#12b886",
+            "--chat-light-header-bg": "#0b0f0e",
+            "--chat-light-header-color": "#ffffff",
+            "--chat-light-button-bg": "#12b886",
+            "--chat-light-message-bot-bg": "#1f3d2b",
+            "--chat-light-message-bot-color": "#ffffff",
+            "--chat-light-message-user-bg": "#12b886",
+            "--chat-light-message-user-color": "#ffffff",
+            "--chat-light-layout-bg": "#0b0f0e",
+          },
+        },
+      });
+    </script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css"
+      rel="stylesheet"
+    />
+    <!-- Custom Chatbot Styles -->
+    <style>
+      :root {
+        --chat--color--primary: #12b886;
+        --chat--color--primary-shade-50: #0ca678;
+      }
+      .n8n-chat-widget {
+        --chat--header--background: #0b0f0e !important;
+        --chat--header--color: #ffffff !important;
+      }
+      /* Hide powered by if the property doesn't work */
+      .n8n-chat-widget-footer-powered-by {
+        display: none !important;
+      }
+      /* Round the chat window corners */
+      .n8n-chat-widget-window {
+        border-radius: 20px !important;
+        overflow: hidden !important;
+        border: 1px solid rgba(18, 184, 134, 0.2) !important;
+      }
+    </style>
   </body>
 </html>

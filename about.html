@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre Nosotros | MIA • Tech • Cloud</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/mia-theme.css" />
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="icon" href="img/logo.png" type="image/png" />
+  </head>
+  <body class="bg-black text-white">
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index">
+          <img src="img/logo.png" alt="MIA • Tech • Cloud Logo" />
+          <span class="text-white fw-bold">MIA • Tech • Cloud</span>
+        </a>
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          aria-controls="navbarNav"
+        >
+          <span style="filter: invert(1)">☰</span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav align-items-center gap-3">
+            <li class="nav-item">
+              <a class="nav-link" href="index">Inicio</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                >Servicios</a
+              >
+              <ul class="dropdown-menu bg-dark border-secondary">
+                <li>
+                  <a class="dropdown-item text-white" href="services/automation"
+                    >Automatización</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item text-white" href="services/bi"
+                    >BI & Analytics</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item text-white" href="services/software"
+                    >Software a Medida</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="about">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-primary" href="contact">Agenda Asesoría</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="section pt-5 mt-5 pb-0">
+      <div class="container text-center">
+        <h1 class="display-3 mb-4">Tecnología con Propósito</h1>
+        <p class="lead text-secondary mx-auto" style="max-width: 800px">
+          Convertimos la tecnología en una "ventaja injusta" para tu negocio. No
+          vendemos código, vendemos resultados.
+        </p>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="section">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card-mia h-100">
+              <i data-lucide="target" class="text-green mb-3"></i>
+              <h4>Resultados Medibles</h4>
+              <p class="text-secondary">
+                Si no se puede medir, no nos interesa. Nos enfocamos en ROI,
+                ahorro de tiempo y crecimiento.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-mia h-100">
+              <i data-lucide="eye" class="text-green mb-3"></i>
+              <h4>Transparencia Total</h4>
+              <p class="text-secondary">
+                Sin cajas negras. Te explicamos qué hacemos, cómo lo hacemos y
+                cuánto cuesta, sin tecnicismos innecesarios.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-mia h-100">
+              <i data-lucide="users" class="text-green mb-3"></i>
+              <h4>Acompañamiento</h4>
+              <p class="text-secondary">
+                No desaparecemos después de la entrega. Tu éxito continuo es
+                nuestro mejor caso de éxito.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="section bg-dark text-center">
+      <div class="container">
+        <h2 class="mb-4">Únete a la Revolución Tecnológica</h2>
+        <a href="contact" class="btn btn-primary btn-lg"
+          >Hablemos de tu Negocio</a
+        >
+      </div>
+    </section>
+
+    <footer
+      class="py-5 border-top border-secondary border-opacity-10 text-center"
+    >
+      <div class="container">
+        <p class="text-secondary">&copy; 2026 MIA • Tech • Cloud.</p>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Widget -->
+    <a
+      href="https://wa.me/573337442515"
+      class="whatsapp-float bg-success"
+      target="_blank"
+    >
+      <i data-lucide="message-circle"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

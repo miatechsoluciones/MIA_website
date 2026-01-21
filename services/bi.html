@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Business Intelligence | MIA • Tech • Cloud</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../css/mia-theme.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" href="../img/logo.png" type="image/png" />
+  </head>
+  <body class="bg-black text-white">
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="../index">
+          <img src="../img/logo.png" alt="MIA • Tech • Cloud Logo" />
+          <span class="text-white fw-bold">MIA • Tech • Cloud</span>
+        </a>
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          aria-controls="navbarNav"
+        >
+          <span style="filter: invert(1)">☰</span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav align-items-center gap-3">
+            <li class="nav-item">
+              <a class="nav-link" href="../index">Inicio</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                >Servicios</a
+              >
+              <ul class="dropdown-menu bg-dark border-secondary">
+                <li>
+                  <a class="dropdown-item text-white" href="automation"
+                    >Automatización</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item text-white" href="bi"
+                    >BI & Analytics</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item text-white" href="software"
+                    >Software a Medida</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../about">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-primary" href="../contact">Agenda Asesoría</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="section pt-5 mt-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h1 class="display-4 text-green mb-3">BI & Analytics</h1>
+            <p class="lead text-secondary mb-4">
+              Deja de adivinar. Toma decisiones basadas en datos reales y tiempo
+              real.
+            </p>
+            <a href="../contact?service=bi" class="btn btn-primary">Ver Demo</a>
+          </div>
+          <div class="col-lg-6 mt-4 mt-lg-0">
+            <div class="card-mia glass-effect">
+              <div class="d-flex justify-content-between mb-4">
+                <h5 class="mb-0">Ventas Q1 2026</h5>
+                <span class="text-green">+14.5% ↑</span>
+              </div>
+              <!-- Simulated Chart Bar -->
+              <div
+                class="d-flex align-items-end justify-content-between gap-1"
+                style="height: 150px"
+              >
+                <div
+                  class="w-100 bg-secondary opacity-25 rounded-top"
+                  style="height: 40%"
+                ></div>
+                <div
+                  class="w-100 bg-secondary opacity-25 rounded-top"
+                  style="height: 60%"
+                ></div>
+                <div
+                  class="w-100 bg-secondary opacity-25 rounded-top"
+                  style="height: 50%"
+                ></div>
+                <div
+                  class="w-100 bg-success rounded-top"
+                  style="height: 85%"
+                ></div>
+                <div
+                  class="w-100 bg-secondary opacity-25 rounded-top"
+                  style="height: 70%"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-dark">
+      <div class="container">
+        <h2 class="text-center mb-5">Dashboards que cuentan historias</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card-mia h-100 border-0 bg-black">
+              <i data-lucide="pie-chart" class="text-green mb-3"></i>
+              <h5>Visualización Clara</h5>
+              <p class="text-secondary small">
+                Looker Studio y Power BI configurados para que entiendas tus
+                KPIs en 5 segundos.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-mia h-100 border-0 bg-black">
+              <i data-lucide="database" class="text-green mb-3"></i>
+              <h5>Data Warehousing</h5>
+              <p class="text-secondary small">
+                Centralizamos tus datos de Facebook, Shopify, CRM y ERP en un
+                solo lugar (BigQuery/SQL).
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-mia h-100 border-0 bg-black">
+              <i data-lucide="trending-up" class="text-green mb-3"></i>
+              <h5>Predictivo</h5>
+              <p class="text-secondary small">
+                Modelos simples para predecir inventario, flujo de caja y
+                demanda futura.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="py-5 border-top border-secondary border-opacity-10 text-center"
+    >
+      <div class="container">
+        <p class="text-secondary">&copy; 2026 MIA • Tech • Cloud.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
