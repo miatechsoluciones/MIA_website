@@ -85,7 +85,9 @@ img {
   border-radius: 24px;
   padding: 2rem;
   border: 1px solid var(--glass-border);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
 }
@@ -174,10 +176,8 @@ img {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(
-      rgba(18, 184, 134, 0.03) 1px,
-      transparent 1px
-    ),
+  background-image:
+    linear-gradient(rgba(18, 184, 134, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(18, 184, 134, 0.03) 1px, transparent 1px);
   background-size: 50px 50px;
 }
@@ -241,4 +241,80 @@ img {
 .whatsapp-float:hover {
   transform: scale(1.1);
   color: white;
+}
+/* How It Works Redesign */
+.step-card {
+  background: var(--gradient-card);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 3rem 2rem;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 2;
+  height: 100%;
+}
+
+.step-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--brand-green);
+  box-shadow: 0 20px 40px rgba(18, 184, 134, 0.15);
+}
+
+.step-number {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: rgba(18, 184, 134, 0.05);
+  line-height: 1;
+  z-index: 1;
+  transition: all 0.4s ease;
+  pointer-events: none;
+}
+
+.step-card:hover .step-number {
+  color: rgba(18, 184, 134, 0.15);
+  transform: scale(1.2);
+}
+
+.icon-box {
+  width: 70px;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem;
+  border: 1px solid var(--glass-border);
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.step-card:hover .icon-box {
+  background: var(--brand-green);
+  transform: rotate(-5deg) scale(1.1);
+  border-color: var(--brand-green);
+}
+
+.step-card:hover .icon-box i {
+  color: white !important;
+}
+
+.methodology-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(18, 184, 134, 0.2),
+    transparent
+  );
+  z-index: 1;
+  transform: translateY(-50%);
 }
