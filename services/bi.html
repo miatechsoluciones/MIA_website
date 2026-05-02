@@ -3,9 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BI & Data Analytics | MIA • TECH • CLOUD</title>
-    <meta name="description" content="Transforma tus datos en decisiones estratégicas. Implementamos Dashboards en Power BI y Looker Studio para una visibilidad total de tu negocio." />
-    <meta name="keywords" content="business intelligence, data analytics, dashboards profesionales, power bi experto, looker studio, analítica de datos, big data empresas" />
+    <title>BI & Data Analytics | Decisiones Inteligentes | MIA • TECH • CLOUD</title>
+    <meta name="description" content="Transforma tus datos en decisiones estratégicas con MIA • TECH • CLOUD. Implementamos Dashboards profesionales en Power BI y Data Studio (Looker) para una visibilidad total de tu negocio." />
+    <meta name="keywords" content="business intelligence, data analytics, dashboards profesionales, power bi experto, data studio, analítica de datos, big data empresas, kpi marketing" />
+    <link rel="canonical" href="https://miatech.cloud/services/bi" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://miatech.cloud/services/bi" />
+    <meta property="og:title" content="BI & Analytics Pro | MIA • TECH • CLOUD" />
+    <meta property="og:description" content="Centralizamos y visualizamos tu información para que cada decisión sea un paso seguro hacia el crecimiento." />
+    <meta property="og:image" content="https://miatech.cloud/bi_dashboard_pro_1777753636858.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="BI & Analytics Pro | MIA • TECH • CLOUD" />
+    <meta property="twitter:description" content="Dashboards inteligentes para empresas que buscan escala y rentabilidad." />
+
+    <!-- Structured Data (JSON-LD) Service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Service",
+      "name": "BI & Data Analytics",
+      "provider": {
+        "@type": "Organization",
+        "name": "MIA • TECH • CLOUD"
+      },
+      "description": "Servicios profesionales de inteligencia de negocios, creación de dashboards y análisis predictivo.",
+      "areaServed": "Global",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "BI Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Dashboards en Data Studio"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Consultoría Power BI"
+            }
+          }
+        ]
+      }
+    }
+    </script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -34,14 +82,16 @@
         border-color: var(--brand-green);
       }
       .tech-icon {
-        width: 60px;
-        filter: grayscale(1);
-        opacity: 0.5;
+        width: 40px;
+        height: 40px;
+        color: var(--brand-white);
+        opacity: 0.8;
         transition: all 0.3s ease;
       }
       .tech-icon:hover {
-        filter: grayscale(0);
+        color: var(--brand-green);
         opacity: 1;
+        transform: scale(1.1);
       }
     </style>
   </head>
@@ -99,10 +149,10 @@
           <div class="col-lg-6 mt-5 mt-lg-0">
             <div class="position-relative">
               <div class="glass-effect p-2 rounded-4 overflow-hidden shadow-lg rotate-3">
-                <img src="bi_dashboard_pro_1777753636858.png" alt="Pro BI Dashboard Visualization" class="img-fluid rounded-3">
+                <img src="../bi_dashboard_pro_1777753636858.png" alt="Pro BI Dashboard Visualization" class="img-fluid rounded-3">
               </div>
-              <div class="glass-effect p-3 rounded-3 position-absolute bottom-0 start-0 translate-middle-x d-none d-md-block" style="width: 200px; margin-bottom: -30px; z-index: 10;">
-                <div class="d-flex align-items-center gap-2 mb-2">
+              <div class="glass-effect p-3 rounded-3 position-absolute bottom-0 end-0 translate-middle d-none d-md-block" style="width: 180px; z-index: 10;">
+                <div class="d-flex align-items-center gap-2">
                     <i data-lucide="trending-up" class="text-green"></i>
                     <small class="fw-bold">ROI Proyectado: +25%</small>
                 </div>
@@ -190,13 +240,13 @@
         <div class="row g-4 justify-content-center">
             <div class="col-6 col-md-2">
                 <div class="p-3">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Looker_Studio_logo.svg" class="tech-icon img-fluid" alt="Looker Studio">
-                    <p class="small mt-2 text-secondary">Looker Studio</p>
+                    <i data-lucide="pie-chart" class="tech-icon mb-2"></i>
+                    <p class="small mt-2 text-secondary">Data Studio</p>
                 </div>
             </div>
             <div class="col-6 col-md-2">
                 <div class="p-3">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Power_bi_logo_black.svg" class="tech-icon img-fluid" alt="Power BI">
+                    <i data-lucide="bar-chart-3" class="tech-icon mb-2"></i>
                     <p class="small mt-2 text-secondary">Power BI</p>
                 </div>
             </div>
@@ -224,6 +274,62 @@
             <a href="../contact" class="btn btn-primary btn-lg px-5">Agenda una Auditoría de Datos</a>
         </div>
     </section>
+
+    <!-- FAQ Section for SEO -->
+    <section class="section">
+        <div class="container" style="max-width: 800px;">
+            <h2 class="text-center mb-5">Preguntas Frecuentes sobre BI</h2>
+            <div class="accordion accordion-flush bg-transparent" id="faqBI">
+                <div class="accordion-item bg-transparent border-secondary border-opacity-25">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            ¿Qué herramientas de visualización utilizan?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqBI">
+                        <div class="accordion-body text-secondary">
+                            Somos expertos en Data Studio (Looker), Power BI y Tableau. Elegimos la herramienta que mejor se adapte a su infraestructura actual y presupuesto.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item bg-transparent border-secondary border-opacity-25">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            ¿Pueden conectar mis datos de redes sociales y CRM?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqBI">
+                        <div class="accordion-body text-secondary">
+                            Sí, centralizamos datos de Facebook Ads, Google Ads, HubSpot, Salesforce y cualquier base de datos SQL para ofrecer una visión 360° de su negocio.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Structured Data (JSON-LD) FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "¿Qué herramientas de visualización utilizan?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Somos expertos en Data Studio (Looker), Power BI y Tableau. Elegimos la herramienta que mejor se adapte a su infraestructura actual y presupuesto."
+        }
+      }, {
+        "@type": "Question",
+        "name": "¿Pueden conectar mis datos de redes sociales y CRM?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, centralizamos datos de Facebook Ads, Google Ads, HubSpot, Salesforce y cualquier base de datos SQL para ofrecer una visión 360° de su negocio."
+        }
+      }]
+    }
+    </script>
 
     <footer class="py-5 border-top border-secondary border-opacity-10 text-center">
       <div class="container">
