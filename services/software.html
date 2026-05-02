@@ -3,67 +3,78 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Desarrollo a Medida | MIA • Tech • Cloud</title>
+    <title>Desarrollo de Software a Medida | MIA • TECH • CLOUD</title>
+    <meta name="description" content="Construimos aplicaciones web robustas, escalables y personalizadas. Expertos en React, Node.js y arquitecturas cloud para soluciones empresariales." />
+    <meta name="keywords" content="desarrollo de software, aplicaciones web, saas development, react developers, node.js expert, arquitectura de software, transformación digital" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/mia-theme.css" />
+
+    <!-- Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="icon" href="../img/logo.png" type="image/png" />
+
+    <style>
+      .code-window {
+        background: #0d1117;
+        border: 1px solid #30363d;
+        border-radius: 12px;
+        font-family: 'Courier New', Courier, monospace;
+        overflow: hidden;
+      }
+      .code-header {
+        background: #161b22;
+        padding: 10px 15px;
+        display: flex;
+        gap: 8px;
+        border-bottom: 1px solid #30363d;
+      }
+      .dot { width: 12px; height: 12px; border-radius: 50%; }
+      .red { background: #ff5f56; }
+      .yellow { background: #ffbd2e; }
+      .green { background: #27c93f; }
+      .tech-card {
+        padding: 1.5rem;
+        border: 1px solid rgba(255,255,255,0.05);
+        background: rgba(255,255,255,0.02);
+        border-radius: 15px;
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+      .tech-card:hover {
+        border-color: var(--brand-green);
+        background: rgba(18, 184, 134, 0.05);
+        transform: translateY(-5px);
+      }
+    </style>
   </head>
   <body class="bg-black text-white">
     <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center gap-2" href="../index">
-          <img src="../img/logo.png" alt="MIA • Tech • Cloud Logo" />
-          <span class="text-white fw-bold">MIA • Tech • Cloud</span>
+          <img src="../img/logo.png" alt="MIA • TECH • CLOUD Logo" />
+          <span class="text-white fw-bold">MIA • TECH • CLOUD</span>
         </a>
-        <button
-          class="navbar-toggler border-0"
-          type="button"
-          aria-controls="navbarNav"
-        >
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span style="filter: invert(1)">☰</span>
         </button>
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
-        >
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav align-items-center gap-3">
             <li class="nav-item">
-              <a class="nav-link" href="../index">Inicio</a>
+              <a class="nav-link" href="../index#coster">MIA • Coster</a>
             </li>
             <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                >Servicios</a
-              >
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Servicios</a>
               <ul class="dropdown-menu bg-dark border-secondary">
-                <li>
-                  <a class="dropdown-item text-white" href="automation"
-                    >Automatización</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item text-white" href="bi"
-                    >BI & Analytics</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item text-white" href="software"
-                    >Software a Medida</a
-                  >
-                </li>
+                <li><a class="dropdown-item text-white" href="automation">Automatización</a></li>
+                <li><a class="dropdown-item text-white" href="bi">BI & Analytics</a></li>
+                <li><a class="dropdown-item text-white" href="software">Software a Medida</a></li>
               </ul>
             </li>
             <li class="nav-item">
@@ -77,86 +88,165 @@
       </div>
     </nav>
 
+    <!-- Hero -->
     <section class="section pt-5 mt-5">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6">
-            <h1 class="display-4 text-green mb-3">Software a Medida</h1>
+            <div class="badge bg-green text-white mb-3 px-3 py-2 rounded-pill">Custom Development</div>
+            <h1 class="display-3 text-white mb-4">
+              Ingeniería que impulsa <span class="text-green">Visiones</span>
+            </h1>
             <p class="lead text-secondary mb-4">
-              Si no existe en el mercado, lo construimos. Aplicaciones web
-              robustas y escalables.
+              No adaptamos su negocio a un software; construimos el software que su negocio necesita. Soluciones escalables, seguras y diseñadas para el futuro.
             </p>
-            <a href="../contact?service=software" class="btn btn-primary"
-              >Cotizar Proyecto</a
-            >
+            <div class="d-flex gap-3">
+                <a href="../contact?service=software" class="btn btn-primary btn-lg">Cotizar Mi Proyecto</a>
+                <a href="#proceso" class="btn btn-outline-secondary btn-lg">Nuestro Método</a>
+            </div>
           </div>
-          <div class="col-lg-6 mt-4 mt-lg-0">
-            <div class="card-mia glass-effect">
-              <div class="d-flex gap-2 mb-3">
-                <div
-                  class="rounded-circle bg-danger"
-                  style="width: 12px; height: 12px"
-                ></div>
-                <div
-                  class="rounded-circle bg-warning"
-                  style="width: 12px; height: 12px"
-                ></div>
-                <div
-                  class="rounded-circle bg-success"
-                  style="width: 12px; height: 12px"
-                ></div>
-              </div>
-              <code class="text-success d-block mb-1"
-                >import { React } from 'react';</code
-              >
-              <code class="text-white d-block mb-1">const App = () => {</code>
-              <code class="text-secondary d-block ms-4"
-                >return &lt;Dashboard data={user.data} /&gt;;</code
-              >
-              <code class="text-white d-block">};</code>
+          <div class="col-lg-6 mt-5 mt-lg-0">
+            <div class="code-window shadow-lg rotate-1">
+                <div class="code-header">
+                    <div class="dot red"></div>
+                    <div class="dot yellow"></div>
+                    <div class="dot green"></div>
+                    <small class="text-secondary ms-2">MIA_Core_Module.js</small>
+                </div>
+                <div class="p-4 small">
+                    <code class="text-blue d-block">class BusinessSolution {</code>
+                    <code class="text-white d-block ms-3">constructor(needs) {</code>
+                    <code class="text-secondary d-block ms-4">this.scalability = 'infinite';</code>
+                    <code class="text-secondary d-block ms-4">this.security = 'maximum';</code>
+                    <code class="text-white d-block ms-3">}</code>
+                    <code class="text-white d-block ms-3">build() {</code>
+                    <code class="text-green d-block ms-4">return new Success(this.needs);</code>
+                    <code class="text-white d-block ms-3">}</code>
+                    <code class="text-blue d-block">}</code>
+                </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Capabilities -->
     <section class="section bg-dark">
-      <div class="container text-center">
-        <h2 class="mb-5">Stack Tecnológico Moderno</h2>
-        <div class="row g-4 justify-content-center">
-          <div class="col-md-3">
-            <div
-              class="p-4 border border-secondary border-opacity-25 rounded-3"
-            >
-              <h5 class="text-white">Frontend</h5>
-              <p class="text-secondary small mb-0">React, Next.js, Vue</p>
+        <div class="container">
+            <h2 class="text-center mb-5">Lo que podemos construir para ti</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="tech-card h-100">
+                        <i data-lucide="layout" class="text-green mb-3" style="width: 40px; height: 40px;"></i>
+                        <h4>SaaS & Web Apps</h4>
+                        <p class="text-secondary small">Plataformas robustas en la nube diseñadas para manejar miles de usuarios simultáneos con latencia mínima.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="tech-card h-100">
+                        <i data-lucide="database" class="text-green mb-3" style="width: 40px; height: 40px;"></i>
+                        <h4>ERPs & CRMs a Medida</h4>
+                        <p class="text-secondary small">Centralice toda su operación en una herramienta única que hable el lenguaje específico de su industria.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="tech-card h-100">
+                        <i data-lucide="smartphone" class="text-green mb-3" style="width: 40px; height: 40px;"></i>
+                        <h4>Mobile First Solutions</h4>
+                        <p class="text-secondary small">Aplicaciones móviles nativas o híbridas que ofrecen la mejor experiencia de usuario en cualquier dispositivo.</p>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col-md-3">
-            <div
-              class="p-4 border border-secondary border-opacity-25 rounded-3"
-            >
-              <h5 class="text-white">Backend</h5>
-              <p class="text-secondary small mb-0">Node.js, Python, PHP</p>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div
-              class="p-4 border border-secondary border-opacity-25 rounded-3"
-            >
-              <h5 class="text-white">Database</h5>
-              <p class="text-secondary small mb-0">PostgreSQL, MongoDB</p>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
 
-    <footer
-      class="py-5 border-top border-secondary border-opacity-10 text-center"
-    >
+    <!-- Method -->
+    <section id="proceso" class="section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="mb-4">Ingeniería de Clase Mundial</h2>
+                    <p class="text-secondary lead mb-4">Nuestro proceso garantiza que cada línea de código tenga un propósito comercial claro.</p>
+                    <div class="d-flex gap-4 mb-4">
+                        <div class="text-center">
+                            <h3 class="text-green fw-bold">100%</h3>
+                            <small class="text-secondary">Código Limpio</small>
+                        </div>
+                        <div class="text-center">
+                            <h3 class="text-green fw-bold">Agile</h3>
+                            <small class="text-secondary">Metodología</small>
+                        </div>
+                        <div class="text-center">
+                            <h3 class="text-green fw-bold">Cloud</h3>
+                            <small class="text-secondary">Native</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="ps-lg-5 border-start border-secondary border-opacity-25">
+                        <div class="mb-4">
+                            <h5 class="text-white">1. Descubrimiento & Arquitectura</h5>
+                            <p class="text-secondary small">No empezamos a programar hasta entender sus metas a largo plazo y diseñar la base técnica ideal.</p>
+                        </div>
+                        <div class="mb-4">
+                            <h5 class="text-white">2. Desarrollo Iterativo</h5>
+                            <p class="text-secondary small">Entregas semanales para que pueda ver el progreso real y ajustar el rumbo según sea necesario.</p>
+                        </div>
+                        <div class="mb-4">
+                            <h5 class="text-white">3. QA & Security Testing</h5>
+                            <p class="text-secondary small">Pruebas rigurosas de estrés y seguridad para garantizar que su software sea inquebrantable.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stack -->
+    <section class="section bg-dark text-center">
+        <div class="container">
+            <h3 class="mb-5">Tecnologías en las que confiamos</h3>
+            <div class="row g-4">
+                <div class="col-6 col-md-3">
+                    <div class="p-4 border border-secondary border-opacity-10 rounded-3">
+                        <i data-lucide="globe" class="text-blue mb-2"></i>
+                        <h6 class="mb-0">React / Next.js</h6>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="p-4 border border-secondary border-opacity-10 rounded-3">
+                        <i data-lucide="server" class="text-green mb-2"></i>
+                        <h6 class="mb-0">Node.js / Python</h6>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="p-4 border border-secondary border-opacity-10 rounded-3">
+                        <i data-lucide="layers" class="text-blue mb-2"></i>
+                        <h6 class="mb-0">AWS / Azure</h6>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="p-4 border border-secondary border-opacity-10 rounded-3">
+                        <i data-lucide="shield" class="text-green mb-2"></i>
+                        <h6 class="mb-0">Docker / Kubernetes</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="section py-5 text-center">
+        <div class="container py-4">
+            <h2 class="display-4 fw-bold mb-4">¿Tienes una idea que necesita ser construida?</h2>
+            <p class="text-secondary lead mb-5 mx-auto" style="max-width: 600px;">Transformamos conceptos complejos en herramientas digitales de alto rendimiento.</p>
+            <a href="../contact" class="btn btn-primary btn-lg px-5">Hablemos de tu Desarrollo</a>
+        </div>
+    </section>
+
+    <footer class="py-5 border-top border-secondary border-opacity-10 text-center">
       <div class="container">
-        <p class="text-secondary">&copy; 2026 MIA • Tech • Cloud.</p>
+        <p class="text-secondary">&copy; 2026 MIA • TECH • CLOUD. Todos los derechos reservados.</p>
       </div>
     </footer>
 

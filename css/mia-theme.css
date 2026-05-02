@@ -217,12 +217,33 @@ img {
   width: 100%;
 }
 
+/* Dropdown on Hover (Desktop) */
+@media (min-width: 992px) {
+  .nav-item.dropdown:hover > .dropdown-menu {
+    display: block;
+    margin-top: 0;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+  }
+
+  .dropdown-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    border-top: 2px solid var(--brand-green) !important;
+  }
+}
+
 /* Floating WhatsApp */
 .whatsapp-float {
   position: fixed;
   bottom: 30px;
-  left: 30px;
-  right: auto;
+  right: 30px;
+  left: auto;
   background-color: #25d366;
   color: #fff;
   width: 60px;
